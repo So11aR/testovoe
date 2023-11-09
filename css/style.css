@@ -18,8 +18,9 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  max-width: 1350px;
+  max-width: 1368px;
   margin: 0 auto;
+  padding: 0 8px;
 }
 
 .none {
@@ -154,4 +155,13 @@ body {
 
 .active {
   background-image: url('./../images/like-heart-filled.svg');
+}
+
+@media (max-width: 1364px) {
+  .container {
+    max-width: 974px;
+  }
+  .news__title {
+    text-align: center;
+  }
 }
