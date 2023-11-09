@@ -11,10 +11,6 @@ const options = {
 const rowWrapper = document.querySelector(".row");
 const card = document.querySelector('.card')
 
-// card.addEventListener('click', function(event) {
-//   const target = event.target
-//   target.classList.toggle('active')
-// })
 // const loader = document.querySelector(".loader-wrapper");
 // const btnLoadMore = document.querySelector(".show-more");
 // btnLoadMore.onclick = fetchAndRenderData
@@ -77,11 +73,9 @@ function renderNews(news) {
     card.id = news.id
 
     card.onclick = addLike
-    // <img src=${news.imgUrl} alt="">
     const html = `
         <div class="card__header">
-          <img src=${news.imgUrl} alt="img  ">
-          
+          <img src=${news.imgUrl} alt="">
         </div>
         <div class="card__body-wrapper">
           <div class="card__body">

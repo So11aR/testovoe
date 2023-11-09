@@ -2,17 +2,24 @@
 @import './loader.css';
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 
+:root {
+	--text-color: #000;
+	--text-muted: #c4c4c4;
+
+  --border-radius-default: 20px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   max-width: 1350px;
   margin: 0 auto;
-
-  font-family: "Roboto", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  background-color: rgb(139, 139, 139);
 }
 
 .none {
@@ -25,8 +32,7 @@
 }
 
 .news__title {
-  color: #000;
-  /* font-family: Roboto; */
+  color: var(--text-color);
   font-size: 48px;
   font-style: normal;
   font-weight: 400;
@@ -42,24 +48,25 @@
 .card {
   display: flex;
   flex-direction: column;
-  /* flex: 1 0 auto; */
-  /* -webkit-box-flex: 1; */
   width: 26.438em;
   height: 591px;
-  /* max-width: 50%; */
   overflow: hidden;
 
-  border-radius: 20px;
-  background: #ebe8e8;
+  border-radius: var(--border-radius-default);
   box-shadow: 0px 4px 15px 0px rgba(0, 161, 92, 0.15);
 }
 
 .card__header {
   overflow: hidden;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  background-color: #c4c4c4;
+  border-top-left-radius: var(--border-radius-default);
+  border-top-right-radius: var(--border-radius-default);
   height: 269px;
+
+  background-color: #999;
+  background-image: url('https://st6.stpulscen.ru/images/product/381/788/950_big.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .card__header img {
@@ -75,12 +82,11 @@
 }
 
 .card__title {
-  color: #000;
+  color: var(--text-color);
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  /* font-family: Roboto; */
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -89,8 +95,7 @@
 }
 
 .card__date {
-  color: #c4c4c4;
-  /* font-family: Roboto; */
+  color: var(--text-muted);
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -103,9 +108,8 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  /* margin-top: 24px; */
-  color: #000;
-  /* font-family: Roboto; */
+
+  color: var(--text-color);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -113,9 +117,7 @@
 }
 
 .card__author {
-  /* margin-top: 42px; */
-  color: #c4c4c4;
-  /* font-family: Roboto; */
+  color: var(--text-muted);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
