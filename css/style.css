@@ -1,0 +1,155 @@
+@import './reset.css';
+@import './loader.css';
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1350px;
+  margin: 0 auto;
+
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: rgb(139, 139, 139);
+}
+
+.none {
+  display: none;
+}
+
+.news__title-wrapper {
+  margin-top: 44px;
+  margin-bottom: 68px;
+}
+
+.news__title {
+  color: #000;
+  /* font-family: Roboto; */
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  /* flex: 1 0 auto; */
+  /* -webkit-box-flex: 1; */
+  width: 26.438em;
+  height: 591px;
+  /* max-width: 50%; */
+  overflow: hidden;
+
+  border-radius: 20px;
+  background: #ebe8e8;
+  box-shadow: 0px 4px 15px 0px rgba(0, 161, 92, 0.15);
+}
+
+.card__header {
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #c4c4c4;
+  height: 269px;
+}
+
+.card__header img {
+  width: 100%;
+  height: 100%;
+}
+
+.card__body-wrapper {
+  padding: 24px 36px;
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+}
+
+.card__title {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  /* font-family: Roboto; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.card__date {
+  color: #c4c4c4;
+  /* font-family: Roboto; */
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 140% */
+}
+
+.card__description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  /* margin-top: 24px; */
+  color: #000;
+  /* font-family: Roboto; */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px; /* 127.778% */
+}
+
+.card__author {
+  /* margin-top: 42px; */
+  color: #c4c4c4;
+  /* font-family: Roboto; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 175% */
+}
+
+.card__body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  row-gap: 10px;
+} 
+
+.icon-btn {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-image: url('./../images/like-heart.svg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  transition: background-image 0.2s ease-in;
+}
+
+.icon-btn:hover {
+  cursor: pointer;
+  background-image: url('./../images/like-heart-filled.svg');
+}
+
+.active {
+  background-image: url('./../images/like-heart-filled.svg');
+}
