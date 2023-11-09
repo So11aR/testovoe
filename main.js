@@ -11,35 +11,35 @@ const options = {
 const rowWrapper = document.querySelector(".row");
 const card = document.querySelector('.card')
 
-// const loader = document.querySelector(".loader-wrapper");
-// const btnLoadMore = document.querySelector(".show-more");
-// btnLoadMore.onclick = fetchAndRenderData
+const loader = document.querySelector(".loader-wrapper");
+const btnLoadMore = document.querySelector(".show-more");
+btnLoadMore.onclick = fetchAndRenderData
 
-// let page = 0
+let page = 0
 
 // Получение и вывод новостей
 async function fetchAndRenderData() {
   // Show preloader
-  // loader.classList.remove('none')
+  loader.classList.remove('none')
 
   // Fetch news data
   const data = await fetchData(url, options)
-  // const totalPages = data.length
-  // console.log(totalPages);
+  const totalPages = data.length
+  console.log(totalPages);
 
-  // if (totalPages > 1) page++
-  // console.log(page);
+  if (totalPages > 1) page++
+  console.log(page);
   
   // Проверка на большое кол-во новостей и отображение кнопки
-  // if (totalPages > 1) btnLoadMore.classList.remove('none')
+  if (totalPages > 1) btnLoadMore.classList.remove('none')
 
   // Hide preloader
-  // loader.classList.add('none')
+  loader.classList.add('none')
 
   // Render news
   renderNews(data);
 
-  // if (page > totalPages) btnLoadMore.classList.add('none') 
+  if (page > totalPages) btnLoadMore.classList.add('none') 
 }
 
 // Разбивка на страницы
@@ -58,15 +58,15 @@ async function fetchData(url, options) {
   const data = await response.json();
   console.log(data);
 
-  // const newData = spliceIntoChunks(data, 6)
-  // console.log(newData);
+  const newData = spliceIntoChunks(data, 6)
+  console.log(newData);
 
-  // return newData
-  return data
+  return newData
+  // return data
 }
 
 function renderNews(news) {
-  for (news of news) {
+  for (const news of news) {
 
     const card = document.createElement('div')
     card.classList.add('card')
