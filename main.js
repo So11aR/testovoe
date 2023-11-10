@@ -74,7 +74,7 @@ function renderNews(news, page) {
         <div class="card__body-wrapper">
           <div class="card__body">
             <div>
-              <h1 class="card__title">${newItem.name}</h1>
+              <h1 class="card__title" title="${newItem.name}">${newItem.name}</h1>
               <p class="card__date">${newItem.date}</p>
             </div>
             <div>
